@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Web Audio</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section data-background="#265466">
+                <h2>Web Audio: Day One</h2>
+                <h3>Synthesis and Sequencing</h3>
+            </section>
+
+            <section data-background="#265466">
+                <h2>Learning Objectives</h2>
+                <ul>
+                    <li>Describe the basic building blocks of a synthesizer</li>
+                    <li>Synthesize and manipulate sounds with code</li>
+                    <li>Sequence musical events in the browser</li>
+                </ul>
+            </section>
+
+            <section data-background="#265466">
+                <h2>Agenda</h2>
+                <ul>
+                    <li>Intros</li>
+                    <li>Setting up your environment</li>
+                    <li>Fundamentals of digital audio synthesis with Tone.js</li>
+                    <li>Time in Tone.js - understanding the Transport</li>
+                    <li>Building a step sequencer</li>
+                </ul>
+            </section>
+
+            <section>
+
+                <section data-background="#265466">What we'll be building ⤵</section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/hpiILHcF3" data-background-interactive>
+                </section>
+            </section>
+
+            <section>
+                <section data-background="#265466">
+                    <h2>What you will need</h2>
+                    <ul>
+                        <li><a href="https://cdnjs.com/libraries/tone">Tone.js Library</a></li>
+                        <li><a href="https://p5js.org/download/">P5.js Library</a></li>
+                        <li><a href="https://tonejs.github.io/docs/14.7.77/index.html">Tone.js Docs</a></li>
+                        <li><a href="https://p5js.org/reference/">P5.js Reference</a></li>
+                        <li>Slide Deck</li>
+                        <li>A Code Editor</li>
+                        <li>Headphones</li>
+                    </ul>
+                </section>
+                <section data-background-gradient="linear-gradient(to top, #265466, #30b08e">
+                    <h2><a href="https://editor.p5js.org/mbnelson86/sketches/NH3HpHQQv">Pre-Configured Web IDE</a></h2>
+                    <h4>with p5.js and Tone.js</h4>
+                </section>
+            </section>
+
+            <section>
+                <div class="tenor-gif-embed" data-postid="25567014" data-share-method="host" data-aspect-ratio="1.33333" data-width="100%"><a href="https://tenor.com/view/lets-make-some-noise-gif-25567014">Lets Make Some Noise GIF</a>from <a href="https://tenor.com/search/lets+make+some+noise-gifs">Lets Make Some Noise GIFs</a></div>
+                <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            </section>
+
+            <section>
+                <section data-background-gradient="linear-gradient(to top, #fafa6e, #9cdf7c)">
+                    <h2>Hello Tone</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					// Create a new Tone.Synth object
+					const synth = new Tone.Synth();
+					// Conect the output of synth to computer's DAC
+					synth.toDestination();
+					// Trigger note C4 for an eight note
+					synth.triggerAttackRelease("C4", "8n");
+					</code></pre>
+                    <!-- <p>Try it ⤵</p> -->
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/FFhUvDHxz" data-background-interactive>
+                </section>
+            </section>
+
+            <section>
+                <section data-background-gradient="linear-gradient(to top, #fafa6e, #9cdf7c)">
+                    <div>
+                        <div id="confused_dog" class="tenor-gif-embed" data-postid="26290638" data-share-method="host" data-aspect-ratio="1" data-width="30%"><a href="https://tenor.com/view/confused-dog-gif-26290638">Confused Dog Sticker</a>from <a href="https://tenor.com/search/confused+dog-stickers">Confused Dog Stickers</a></div>
+                    </div>
+
+                    <img src="/assets/audio_context_warning.png">
+                </section>
+
+                <section data-background-gradient="linear-gradient(to top, #fafa6e, #9cdf7c)">
+                    <img src="/assets/tone_start.png">
+                    <p><a href="https://tonejs.github.io/">https://tonejs.github.io/</a></p>
+                </section>
+
+                <section data-background-gradient="linear-gradient(to top, #fafa6e, #9cdf7c)">
+                    <p>P5js <a href="https://p5js.org/reference/#/p5.Element/mousePressed">mousePressed() method</a> to the rescue</p>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/liufSYnr1" data-background-interactive>
+                </section>
+
+            </section>
+
+            <section>
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
+                    <h3>Oscillator Types</h3>
+                    <img src="https://lumen-app.com/guide/oscillators/images/wave-types.png"></iframe>
+                    <div>
+                        <a href="https://learningsynths.ableton.com/en/oscillators/how-synths-make-sound">learn more about oscillators</a>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/1mf3TRXFf" data-background-interactive>
+                </section>
+            </section>
+
+            <section>
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
+                    <h3>Amplitude Envelope</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ADSR-envelope.svg/640px-ADSR-envelope.svg.png"></iframe>
+                    <div>
+                        <a href="https://learningsynths.ableton.com/en/envelopes/modulating-amplitude-with-envelopes">learn more about envelopes</a>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/g9CYWAHT_" data-background-interactive>
+                </section>
+            </section>
+
+            <section>
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
+                    <h3>Filters</h3>
+                    <img src="https://www.allaboutcircuits.com/uploads/articles/Types_of_Filters.jpg" style="width: 40%"></iframe>
+                    <div>
+                        <a href="https://learningsynths.ableton.com/en/filters/filters-in-synthesizers">learn more about filters</a>
+                    </div>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
