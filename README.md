@@ -1,49 +1,46 @@
-### Web Audio with P5.js and Tone.js
+## Web Audio with P5.js and Tone.js
 
-#### Day One - Synthesis and Sequencing
+### Day One - Synthesis and Sequencing
 
--   Learning Objectives:
+- Learning Objectives:
+  - Describe the basic building blocks of a synthesizer
+  - Synthesize and manipulate sounds with code
+  - Sequence musical events in the browser
 
-  -   Describe the basic building blocks of a synthesizer
+- Agenda: 
 
-  -   Synthesize and manipulate sounds with code
+  - Intro
 
-  -   Sequence musical events in the browser
+  - Setting up your environment
 
--   Agenda: 
+  - Fundamentals of digital audio synthesis with Tone.js
 
-  -   Intro
+    - Oscillators
 
-  -   Setting up your environment
+    - Envelopes
 
-  -   Fundamentals of digital audio synthesis with Tone.js
+    - Filters
 
-    -   Oscillators
+  - What is a "synth"?
 
-    -   Envelopes
+  - What is a Tone.Synth()?
 
-    -   Filters
+  - Time in Tone.js - understanding the Transport
 
-  -   What is a "synth"?
+  - Scheduling events
 
-  -   What is a Tone.Synth()?
+    - Loop
 
-  -   Time in Tone.js - understanding the Transport
+    - Pattern
 
-  -   Scheduling events
+    - Sequence
 
-    -   Loop
+  - Building a [simple step sequencer](https://editor.p5js.org/mbnelson86/sketches/hpiILHcF3)
 
-    -   Pattern
+    - Setting up the HTML
 
-    -   Sequence
+    - Setting up our synth
 
-  -   Building a [simple step sequencer](https://editor.p5js.org/mbnelson86/sketches/hpiILHcF3)
+    - Triggering notes
 
-    -   Setting up the HTML
-
-    -   Setting up our synth
-
-    -   Triggering notes
-
-    -   Adding FX
+    - Adding FX
