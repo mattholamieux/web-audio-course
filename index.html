@@ -91,14 +91,14 @@
             <section>
                 <section data-background-gradient="linear-gradient(to top, #fafa6e, #9cdf7c)">
                     <h2>Hello Tone</h2>
-                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-					// Create a new Tone.Synth object
-					const synth = new Tone.Synth();
-					// Conect the output of synth to computer's audio output
-					synth.toDestination();
-					// Trigger note C4 for an eight note
-					synth.triggerAttackRelease("C4", "8n");
-					</code></pre>
+                    <pre data-id="code-animation">
+                        <code class="hljs" data-trim data-line-numbers>
+					// Create a new Tone.Synth object and conect the synth to computer's audio output
+					const synth = new Tone.Synth().toDestination();
+					// Trigger note C4
+					synth.triggerAttack("C4");
+					</code>
+                </pre>
                     <!-- <p>Try it ⤵</p> -->
                 </section>
 
@@ -121,7 +121,9 @@
                 </section>
 
                 <section data-background-gradient="linear-gradient(to top, #fafa6e, #9cdf7c)">
-                    <p>Let's use P5 to add a button. We'll use the button to call Tone.start()</p>
+                    <p>Let's use P5 to add buttons. </p>
+                    <p>We'll use one button to call Tone.start() and trigger the note onset</p>
+                    <p>We'll use a second button to trigger the note release</p>
                 </section>
 
                 <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/liufSYnr1" data-background-interactive>
@@ -130,54 +132,171 @@
             </section>
 
             <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
-                    <h3>Oscillator Types</h3>
-                    <img src="https://lumen-app.com/guide/oscillators/images/wave-types.png"></iframe>
+                <section data-background-gradient="linear-gradient(to top, #fa1abe, #9cdf7c)">
+                    What is a synth?
+                </section>
+                <section data-background-gradient="linear-gradient(to top, #fa1abe, #9cdf7c)">
                     <div>
-                        <a href="https://learningsynths.ableton.com/en/oscillators/how-synths-make-sound">learn more about oscillators</a>
+                        <img src="./assets/subphatty.png" style="width: 800px">
+                    </div>
+                </section>
+                <section data-background-gradient="linear-gradient(to top, #fa1abe, #9cdf7c)">
+                    <img src=" ./assets/subtractive-synth.jpg ">
+                </section>
+            </section>
+
+            <section>
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                    <h3>Oscillator Types</h3>
+                    <img src="https://lumen-app.com/guide/oscillators/images/wave-types.png "></iframe>
+                    <div>
+                        <a href="https://learningsynths.ableton.com/en/oscillators/how-synths-make-sound ">learn more about oscillators</a>
                     </div>
                 </section>
 
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/1mf3TRXFf" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/1mf3TRXFf " data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; ">
                         <p>Try changing the oscillator type on line 6</p>
                     </div>
                 </section>
             </section>
 
-            <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
-                    <h3>Amplitude Envelope</h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ADSR-envelope.svg/640px-ADSR-envelope.svg.png"></iframe>
-                    <div>
-                        <a href="https://learningsynths.ableton.com/en/envelopes/modulating-amplitude-with-envelopes">learn more about envelopes</a>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/RPuNNuvQw" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-                        <p>Try changing the attack and release times on lines 7 and 9, as well as sustain times on line 33</p>
-                    </div>
-                </section>
-            </section>
-
-            <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
+            <section id="Filters">
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
                     <h3>Filters</h3>
-                    <img src="https://www.allaboutcircuits.com/uploads/articles/Types_of_Filters.jpg" style="width: 40%"></iframe>
+                    <img src="https://www.allaboutcircuits.com/uploads/articles/Types_of_Filters.jpg " style="width: 40% "></iframe>
                     <div>
-                        <a href="https://learningsynths.ableton.com/en/filters/filters-in-synthesizers">learn more about filters</a>
+                        <a href="https://learningsynths.ableton.com/en/filters/filters-in-synthesizers ">learn more about filters</a>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                    <h3>Creating a Tone.Filter</h3>
+                    <pre data-id="code-animation ">
+                        <code class="hljs " data-trim data-line-numbers>
+                    // Create a filter and set cutoff frequency and filter type
+                    const filter = new Tone.Filter(500, "lowpass")
+                    // Connect our synth to the filter
+                    synth.chain(filter);
+                    // Connect the filter to the output
+                    filter.toDestination();
+                        </code>
+                    </pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/Sb0Nj1OGT " data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Try changing the filter frequency on line 15 from 500 to 2500 to 5000 to 15000</p>
+                        <p>Then try changing the filter type on line 16 to "highpass "</p>
+                        <p>Finally, add a line to the draw loop to control the frequency value with the mouseX position</p>
+                    </div>
+                </section>
+            </section>
+
+            <section id="envelope">
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                    <h3>Amplitude Envelope</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ADSR-envelope.svg/640px-ADSR-envelope.svg.png "></iframe>
+                    <div>
+                        <a href="https://learningsynths.ableton.com/en/envelopes/modulating-amplitude-with-envelopes ">learn more about envelopes</a>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                    <h3>Controlling amplitude in Tone.js</h3>
+                    <pre data-id="code-animation">
+                        <code class="hljs" data-trim data-line-numbers>
+                            synth.triggerAttackRelease("C4", 0.1);
+					</code>
+                </pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/RPuNNuvQw " data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Try changing the attack, decay, and release times on lines 10-12</p>
+                        <p>Then try changing the sustain time on line 30</p>
+                        <p>Finally, add a conditional statement to the draw loop to control release time with right and left arrows</p>
                     </div>
                 </section>
             </section>
 
             <section>
-                <section>What is a synth?</section>
-                <section>What is a Tone.Synth()?</section>
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                    <h3>Defining multiple synth params</h3>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers>
+                        const synth = new Tone.Synth({
+                            oscillator: {
+                              type: "sawtooth "
+                            },
+                            envelope: {
+                              attack: 1,
+                              decay: 0.5,
+                              release: 4
+                            }
+                          });
+                        </code></pre>
+                </section>
+
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                    <h3>Tone.js includes different synthesis models</h3>
+                    <h5>Each has different parameters</h5>
+                </section>
+
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                    <h3>FM Synth</h3>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers>
+                        const fmSynth = new Tone.FMSynth({
+                            harmonicity: 8,
+                            modulationIndex: 10,
+                            envelope: {
+                              attack: 0.1,
+                              decay: 0.5,
+                              release: 4,
+                            },
+                            modulationEnvelope: {
+                              attack: 0.3,
+                              decay: 0.5,
+                              release: 1,
+                            }
+                          });                          
+                        </code></pre>
+                </section>
+
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                    <h3>Pluck Synth</h3>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers>
+                        const pluckSynth = new Tone.Synth({
+                            oscillator: {
+                              type: "sawtooth "
+                            },
+                            envelope: {
+                              attack: 1,
+                              release: 4
+                            }
+                          });
+                        </code></pre>
+                </section>
+
+                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                    <h3>MonoSynth</h3>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers>
+                        const monoSynth = new Tone.Synth({
+                            oscillator: {
+                              type: "sawtooth "
+                            },
+                            envelope: {
+                              attack: 1,
+                              release: 4
+                            }
+                          });
+                        </code></pre>
+                </section>
+
             </section>
 
             <section>
                 Time in Tone.js
+                <a href="https://github.com/Tonejs/Tone.js/wiki/Time">Time in Tone.js</a>
             </section>
 
             <section>
@@ -195,12 +314,12 @@
                 <section>Adding FX</section>
             </section>
 
-            <section id="day-two" data-background="#626654">
+            <section id="day-two " data-background="#626654 ">
                 <h2>Web Audio: Day Two</h2>
                 <h3>Samples and User Interaction</h3>
             </section>
 
-            <section id="day-three" data-background="#664562">
+            <section id="day-three " data-background="#664562 ">
                 <h2>Web Audio: Day Three</h2>
                 <h3>Generative Techniques</h3>
             </section>
@@ -208,10 +327,10 @@
         </div>
     </div>
 
-    <script src="dist/reveal.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
     <script>
         // More info about initialization & config:
         // - https://revealjs.com/initialization/
