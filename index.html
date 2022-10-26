@@ -40,6 +40,7 @@
                     <li>Describe the basic building blocks of a synthesizer</li>
                     <li>Synthesize and manipulate sounds with code</li>
                     <li>Sequence musical events in the browser</li>
+                    <li>Visualize musical events with P5.js</li>
                 </ul>
             </section>
 
@@ -49,8 +50,9 @@
                     <li>Intros</li>
                     <li>Setting up your environment</li>
                     <li>Fundamentals of digital audio synthesis with Tone.js</li>
-                    <li>Time in Tone.js - understanding the Transport</li>
-                    <li>Building a step sequencer</li>
+                    <li>Sequencing note events with Tone.js</li>
+                    <li>Connecting our sequence to p5.js</li>
+                    <li>Create a polyrhythmic melody</li>
                 </ul>
             </section>
 
@@ -58,7 +60,7 @@
 
                 <section data-background="#265466">What we'll be building ⤵</section>
 
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/hpiILHcF3" data-background-interactive>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/qbI-ULG4p" data-background-interactive>
                 </section>
             </section>
 
@@ -69,7 +71,7 @@
                         <li><a href="https://cdnjs.com/libraries/tone">Tone.js Library</a></li>
                         <li><a href="https://p5js.org/download/">P5.js Library</a></li>
                         <li><a href="https://tonejs.github.io/docs/14.7.77/index.html">Tone.js Docs</a></li>
-                        <li><a href="https://p5js.org/reference/">P5.js Reference</a></li>
+                        <li><a href="https://p5js.org/reference/">P5.js Docs</a></li>
                         <li>Slide Deck</li>
                         <li>A Code Editor</li>
                         <li>Headphones</li>
@@ -92,7 +94,7 @@
                     <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 					// Create a new Tone.Synth object
 					const synth = new Tone.Synth();
-					// Conect the output of synth to computer's DAC
+					// Conect the output of synth to computer's audio output
 					synth.toDestination();
 					// Trigger note C4 for an eight note
 					synth.triggerAttackRelease("C4", "8n");
@@ -119,7 +121,7 @@
                 </section>
 
                 <section data-background-gradient="linear-gradient(to top, #fafa6e, #9cdf7c)">
-                    <p>P5js <a href="https://p5js.org/reference/#/p5.Element/mousePressed">mousePressed() method</a> to the rescue</p>
+                    <p>Let's use P5 to add a button. We'll use the button to call Tone.start()</p>
                 </section>
 
                 <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/liufSYnr1" data-background-interactive>
@@ -137,6 +139,9 @@
                 </section>
 
                 <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/1mf3TRXFf" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                        <p>Try changing the oscillator type on line 6</p>
+                    </div>
                 </section>
             </section>
 
@@ -149,7 +154,10 @@
                     </div>
                 </section>
 
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/g9CYWAHT_" data-background-interactive>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/RPuNNuvQw" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                        <p>Try changing the attack and release times on lines 7 and 9, as well as sustain times on line 33</p>
+                    </div>
                 </section>
             </section>
 
