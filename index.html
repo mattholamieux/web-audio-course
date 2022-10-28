@@ -901,7 +901,83 @@
                         <p>Remember that the final effect in the chain should be connected to the toDestination() method</p>
                     </div>
                 </section>
+            </section>
 
+            <section>
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <h3>Controlling params with UI</h3>
+                    <p>Let's use p5.js to control synth parameters in real time</p>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Using p5's mouseX and mouseY variables</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="2-3">
+                        function draw(){
+                            delay.wet.value = map(mouseX, 0, width, 0, 1, true);
+                            delay.feedback.value = map(mouseY, height, 0, 0, 0.9, true);
+                        }
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/J_L5QomJf" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>We need to scale the mouseX and mouse Y values to the appropriate range using P5's map() method</p>
+                        <p>In this example, mouseX and mouseY are 0-400 (canvas width and height), while delay.wet and delay.feedback are 0-1</p>
+                    </div>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Using key presses</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1-4|6|9|10|12|13|15">
+                        const myDistort = new Tone.Distortion({
+                            distortion: 0,
+                            wet: 1
+                          });
+
+                        let distortionVal = 0;
+
+                        function draw(){
+                            if (keyIsDown(UP_ARROW)) {
+                                distortionVal += 0.05;
+                              }  
+                            if (keyIsDown(DOWN_ARROW)) {
+                                distortionVal -= 0.05;
+                              }
+                            myDistort.distortion = distortionVal;
+                        }
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/4xZIRMdhW" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>The nested if-statement on line 29 ensures that the distortion value doesn't go below zero (which would throw an error) </p>
+                    </div>
+                </section>
+
+
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Using sliders</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|4-6|10">
+                    let slider;
+
+                    function setup(){
+                        slider = createSlider(0, 1, 0, 0.01);
+                        slider.position(100, 150);
+                        slider.style('width', '150px');
+                    }
+
+                    function draw(){
+                        reverb.wet.value = reverbSlider.value(); 
+                    }
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/d-Nfz6bn9" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Parameters to createSlider on line 17 are (minimum value, maximum value, initial value, increment amount)</p>
+                    </div>
+                </section>
 
             </section>
 
