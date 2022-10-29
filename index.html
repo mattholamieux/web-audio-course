@@ -978,14 +978,239 @@
                         <p>Parameters to createSlider on line 17 are (minimum value, maximum value, initial value, increment amount)</p>
                     </div>
                 </section>
-
             </section>
 
 
 
+            <section>
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <h3>Mini Project #2</h3>
+                    <p>Create a programmable drum machine</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Four_to_the_floor_Roland_TR-707.svg">
+                </section>
+
+                <section data-background-gradient="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)" id="fragments">
+                    <h3>Parameters</h3>
+                    <ul>
+                        <li class="fragment">Should include 6 rows of 12 checkboxes</li>
+                        <li class="fragment">Each column represents a step in the sequence and each row represents a different "instrument"</li>
+                        <li class="fragment">The sampler is triggered when a checkbox in the current step is checked</li>
+                        <li class="fragment">Should include 3 sliders to allow user to change FX parameters</li>
+                        <li class="fragment">A fourth slider should allow the user to change the tempo</li>
+                    </ul>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <a href="https://editor.p5js.org/mbnelson86/sketches/gbTC3yBdF">Starter Code</a>
+                </section>
 
 
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Create a row of checkboxes</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="5-6|16|17|18-19|20">
+                        let startButton;
+                        let stopButton;
+                        const notes = ["A1", "B1", "C1", "D1", "E1", "F1"];
+                        let index = 0;
+                        let row = [];
+                        const rowLength = 12;
+                        
+                        function setup() {
+                          createCanvas(400, 400);
+                          startButton = createButton("start transport");
+                          stopButton = createButton("stop transport");
+                          startButton.mousePressed(startTransport);
+                          stopButton.mousePressed(stopTransport);
+                          
+                          // Create checkboxes and push to row array
+                          for (let i = 0; i < rowLength; i++) {
+                            let cb = createCheckbox();
+                            cb.position(i * 20 + 10, 20);
+                            cb.style('background-color', 'gray');
+                            row.push(cb);
+                          }
+                        }   
+                    </code></pre>
+                </section>
 
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Create a Tone.Loop to cycle through checkboxes and check if "checked"</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|4|5|6-8|9">
+                        let step = 0;
+                        
+                        const loop = new Tone.Loop((time) => {
+                            let step = index % rowLength;
+                            let cb = row[step];
+                            if (cb.checked()) {
+                              sampler.triggerAttackRelease(notes[0], "8n", time);
+                            }
+                            index++;
+                          }, "8n").start(0);
+                    </code></pre>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Visually highlight the current step</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="5-7|9">
+                        let step = 0;
+                        
+                        const loop = new Tone.Loop((time) => {
+                            let step = index % rowLength;
+                            for (let box of row) {
+                                box.style('background-color', 'gray');
+                            }
+                            let cb = row[step];
+                            cb.style('background-color', 'blue');
+                            if (cb.checked()) {
+                              sampler.triggerAttackRelease(notes[0], "8n", time);
+                            }
+                            index++;
+                          }, "8n").start(0);
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/oTq55hHbB" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Start the transport and click the checkboxes to trigger the sampler</p>
+                    </div>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Create six rows of checkboxes</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="5-7|16|17|18-23|24">
+                        let startButton;
+                        let stopButton;
+                        const notes = ["A1", "B1", "C1", "D1", "E1", "F1"];
+                        let index = 0;
+                        const rowLength = 12;
+                        const numRows = 6;
+                        const grid = [];
+
+                        function setup() {
+                            createCanvas(300, 400);
+                            startButton = createButton("start transport");
+                            stopButton = createButton("stop transport");
+                            startButton.mousePressed(startTransport);
+                            stopButton.mousePressed(stopTransport);
+
+                            for (let j = 0; j < numRows; j++) {
+                                let row = [];
+                                for (let i = 0; i < rowLength; i++) {
+                                    let cb = createCheckbox();
+                                    cb.position(i * 20 + 25, j* 20 + 25);
+                                    cb.style("background-color", "gray");
+                                    row.push(cb);
+                                }
+                                grid.push(row);
+                            }
+                        }
+                    </code></pre>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Check if the boxes for the current step are checked <b>in each row</b></p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="4|10">
+                        const loop = new Tone.Loop((time) => {
+                            let step = index % rowLength;
+                            
+                            for (let row of grid) {
+                                for (let box of row) {
+                                    box.style("background-color", "gray");
+                                }
+                                let cb = row[step];
+                                cb.style("background-color", "blue");
+                                let note = notes[grid.indexOf(row)];
+                                if (cb.checked()) {
+                                    sampler.triggerAttackRelease(note, "8n", time);
+                                }
+                            }
+
+                            index++;
+                        }, "8n").start(0);
+                    </code></pre>
+                    <div style="position: absolute; width: 40%; right: 0; top: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>and set the note for each row based on its index in the grid array</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/wQ0xMvf21" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Start the transport and click the checkboxes to trigger the sampler</p>
+                    </div>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Create four sliders</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="8|29-34">
+                        let startButton;
+                        let stopButton;
+                        const notes = ["A1", "B1", "C1", "D1", "E1", "F1"];
+                        let index = 0;
+                        const rowLength = 12;
+                        const numRows = 6;
+                        const grid = [];
+                        const sliders = [];
+
+                        function setup() {
+                        createCanvas(300, 400);
+                        startButton = createButton("start transport");
+                        stopButton = createButton("stop transport");
+                        startButton.mousePressed(startTransport);
+                        stopButton.mousePressed(stopTransport);
+
+                        // For loop to create 7 rows of checkboxes
+                        for (let j = 0; j < numRows; j++) {
+                            let row = [];
+                            for (let i = 0; i < rowLength; i++) {
+                                let cb = createCheckbox();
+                                cb.position(i * 20 + 25, j * 20 + 25);
+                                cb.style("background-color", "gray");
+                                row.push(cb);
+                            }
+                            grid.push(row);
+                        }
+
+                        for (let i = 0; i < 4; i++) {
+                            let s = createSlider(0, 1, 0, 0.01);
+                            s.position(25, i*30+150);
+                            s.style("width", "230px");
+                            sliders.push(s);
+                        }
+                    }
+                    </code></pre>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Control FX params with sliders</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="3-5">
+                        function draw() {
+                            background(220);
+                            reverb.wet.value = sliders[0].value();
+                            crusher.wet.value = sliders[1].value();
+                            delay.wet.value = sliders[2].value();
+                          }
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/dLmvIOOf1" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>In this example, the fourth slider is used to control bpm (line 42). Notice that we map the slider value (0-1) to a range appropriate for bpm (60-140)</p>
+                        <p>Notice also that we wrap all of the slider value changes in an <code>if (mouseIsPressed)</code> conditional statement to save unecessarily running code when the values haven't changed</p>
+                    </div>
+                </section>
+
+                <section data-background-gradient="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)" id="fragments">
+                    <h3>Taking it further</h3>
+                    <ul>
+                        <li class="fragment">Add a button that clears all checkboxes</li>
+                        <li class="fragment">Create a "randomize" button that randomly checks some boxes in the grid</li>
+                        <li class="fragment">Create a "reverse" button that plays the sequence backwards</li>
+                        <li class="fragment">Add more sliders for further control of FX parameters</li>
+                        <li class="fragment">Change the sampler to a synth and map sliders to synth params</li>
+                        <li class="fragment">Add additional styling</li>
+                    </ul>
+                </section>
+            </section>
 
             <section id="day-three" data-background="#664562 ">
                 <h2>Web Audio: Day Three</h2>
