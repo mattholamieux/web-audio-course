@@ -11,22 +11,32 @@
     <link rel="stylesheet" href="dist/reveal.css">
     <link rel="stylesheet" href="dist/theme/black.css">
     <link rel="stylesheet" href="css/style.css">
-
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <script src="js/wind_chime/p5.js"></script>
+    <script src="js/wind_chime/Tone.js"></script>
 </head>
 
 <body>
     <div class="reveal">
         <div class="slides">
 
+            <!-- <section>
+                <div id="vizzie"></div>
+            
+            </section> -->
+
             <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)" id="home">
-                <h2>Web Audio</h2>
-                <a href="#/day-one">Day One</a>
-                </br>
-                <a href="#/day-two">Day Two</a>
-                </br>
-                <a href="#/day-three">Day Three</a>
+                <h3>Welcome to Web Audio!</h3>
+                <div id="vizzie"></div>
+                <div style="position: absolute; width: 10%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; ">
+                    <a href="#/day-one">Day One</a>
+                    </br>
+                    <a href="#/day-two">Day Two</a>
+                    </br>
+                    <a href="#/day-three">Day Three</a>
+                </div>
+
             </section>
 
             <section id="day-one" data-background="linear-gradient(to top, #1d6172, #9cdf7c)">
@@ -1335,6 +1345,9 @@
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
+    <script src="js/wind_chime/synth.js"></script>
+    <script src="js/wind_chime/thing.js"></script>
+    <script src="js/wind_chime/sketch.js"></script>
 </body>
 
 </html>
