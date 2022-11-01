@@ -20,7 +20,6 @@ function setup() {
     rectMode(CENTER);
     cnv = createCanvas(700, 500);
     cnv.parent('vizzie')
-        // cnv.mousePressed(startUp);
     for (let i = 0; i < 4; i++) {
         let note = random(notes);
         let index = notes.indexOf(note);
@@ -50,7 +49,7 @@ function draw() {
         }
     } else {
         fill(255);
-        text('click me!', width / 2 - 50, 250);
+        text('click for sound', width / 2 - 70, 250);
     }
 }
 
