@@ -1249,8 +1249,194 @@
                 </div>
             </section>
 
+            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                <h2>Data Sonification</h2>
+                <ul>
+                    <li>Load data from external APIs</li>
+                    <li>Map arbitrary data to musical parameters</li>
+                </ul>
+            </section>
 
-            <!-- <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                <h2>Data Sonification</h2>
+                <p>Is another way of conveying information.</p>
+                <div style="position: absolute; width: 60%; right: 0; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 22px; text-align: left; ">
+                    <p>"When you present data, you usually use visual cues to show the analysis of your work. But in this case, you use sound to make something easier to understand."</p>
+                    <p><a href="https://towardsdatascience.com/sonification-when-you-go-beyond-the-visual-representation-of-data-cf6c7229a557">Sonification — When You Go Beyond the Visual Representation Of Data</a></p>
+                </div>
+            </section>
+
+            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Portable_Geiger_counter_series_900_mini-monitor.jpg">
+            </section>
+
+            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                <iframe src="https://player.vimeo.com/video/528822742?h=3f4f36540d" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <p><a href="https://vimeo.com/528822742">OpenSpace Sonification</a> from <a href="https://vimeo.com/user136419958">Anonymous</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+            </section>
+
+            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                <video controls width="250" style="width: 80%">
+                    <source src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Air_Play_-_Sonification_of_Beijing_Air_Quality_Data.webm"
+                            type="video/webm">
+                </video>
+            </section>
+
+            <section>
+
+                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                    <h4>Where should we get our data?</h4>
+                    <ul>
+                        <li><a href="https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/">https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/</a></li>
+                        <li><a href="https://apipheny.io/free-api/">https://apipheny.io/free-api/</a></li>
+                        <li><a href="https://github.com/public-apis/public-apis">https://github.com/public-apis/public-apis</a></li>
+                    </ul>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                    <h4>Highly recommended YT course for anyone new to data and APIs</h4>
+                    <p><a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X">Coding Train: Working with Data and APIs in JavaScript</a></p>
+
+                </section>
+
+            </section>
+
+            <section>
+
+                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                    <h3>Building a simple weather sonification thingy</h3>
+                    <p>Parameters</p>
+                    <ul>
+                        <li class="fragment">capture hourly temp and cloud cover forecasts from a weather api</li>
+                        <li class="fragment">loop through the data and trigger a note for each hour</li>
+                        <li class="fragment">map temperature to pitch</li>
+                        <li class="fragment">map filter cutoff to cloud cover</li>
+                    </ul>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                    <a href="https://open-meteo.com/en/docs#api_form">Free Weather API</a>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                    <p>Load JSON data via preload() function</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|3|4|5">
+                        let url ="https://api.open-meteo.com/v1/forecast?latitude=34.05&longitude=-118.24&hourly=temperature_2m&temperature_unit=fahrenheit&hourly=cloudcover";
+
+                        function preload() {
+                            loadJSON(url, (weatherData) => {
+                                console.log(weatherData);
+                            });
+                        }
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/CSNi71uqc" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>loadJSON() loads a JSON file from a file or a URL, and returns an Object</p>
+                        <p>This method is asynchronous, meaning it may not finish before the next line in your sketch is executed</p>
+                        <p>P5's preload function is used to handle asynchronous loading of external files in a blocking way. If a preload function is defined, setup() will wait until any load calls within have finished</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/ZFZAnkXeM" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>On lines 9-10, we use dot notation to access the data that we want from the returned object, and assign it to a variable</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/ceAbwE81f" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>On lines 27-36, we use a Tone.Loop to step through the individual array indices and print them to the console</p>
+                    </div>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                    <p>Mapping our data to appropriate ranges</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="3-4|5-6|7|8-9">
+                        const notes = ["C2","D2","E2","F2"];
+
+                        let temp = tempArray[index];
+                        let cloudCover = cloudArray[index];
+                        let tempMap = floor(map(temp, 40, 70, 0, notes.length, true));
+                        let cloudMap = floor(map(cloudCover, 0, 100, 6000, 200));
+                        let note = notes[tempMap];
+                        filter.frequency.value = cloudMap;
+                        fmSynth.triggerAttackRelease(note, "1n", time);
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/W7IDcWgX-" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>On lines 31-32, we map temp and cloud values to appropriate ranges for our note and frequency cutoff values</p>
+                        <p>On lines 33-34 we apply the mapped values to note and frequency cutoff</p>
+                        <p>On line 35 we trigger our synth</p>
+                    </div>
+                </section>
+
+            </section>
+
+
+            <section>
+                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                    <h3>Building an rgb synth</h3>
+                    <p>Parameters</p>
+                    <ul>
+                        <li class="fragment">load a random image via https://picsum.photos/</li>
+                        <li class="fragment">display image on canvas</li>
+                        <li class="fragment">loop through x and y positions and extrac r,g,b values</li>
+                        <li class="fragment">map r,g,b values to notes for 3 note chords</li>
+                    </ul>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/5f5eofgCj" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>On line 10 we load a random image from the API</p>
+                        <p>On line 23 we draw the image to the canvas</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/U_WHuk0pv" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>On line 25 we use the .get method to extract RGB values at mouseX/Y position</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/JxOZdZUV3" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>In this example, we use a Tone.Loop to update the x and y position that we're passing to the .get method</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/dkQy74QMq" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>On lines 29-31, we map each r,g,b value to a range between 0 and the length of the notes array</p>
+                        <p>On lines 32-34, we choose a note from the notes array for each mapped r,g,b value</p>
+                        <p>On lines 35-37, we trigger our polyphonic synth three times, passing each note to form a chord</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/fFEOTVM8c" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>For extra fun, we've added functions to invert each r,g,b value individually via key presses (check out filters.js)</p>
+                        <p>This code has been remixed from https://idmnyu.github.io/p5.js-image/Filters/index.html</p>
+                        <p>We've also added some delay, bcuz delay makes everything sound cool</p>
+                    </div>
+                </section>
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
                 <h2>Learning Objectives</h2>
                 <ul>
                     <li>Utilize randomness to generate melodies and rhythms</li>
@@ -1260,30 +1446,12 @@
             </section>
 
             <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                <h2>Agenda</h2>
-                <ul>
-                    <li>Day Two review</li>
-                    <li>Harnessing randomness</li>
-                    <ul>
-                        <li>Random()</li>
-                        <li>Noise()</li>
-                    </ul>
-                    <li>Mapping data to musical parameters</li>
-                    <ul>
-                        <li>X/Y values</li>
-                        <li>RGB values</li>
-                    </ul>
-                    <li>Mini-project #3: Web Chimes</li>
-                </ul>
-            </section> -->
-
-            <!-- <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
                 <h2>Generative Music</h2>
                 <p>a term popularized by Brian Eno to describe music that is ever-different and changing, and that is created by a system.</p>
                 <div style="position: absolute; width: 60%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 22px; text-align: left; ">
                     <p>"I wanted something that had an organic quality to it. Had some sense of movement and change. Every time you played it something slightly different happened."</p>
                 </div>
-            </section> -->
+            </section>
 
             <!-- <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)"
                 <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Wchime.jpg" style="width: 50%">
