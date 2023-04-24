@@ -21,32 +21,27 @@
     <div class="reveal">
         <div class="slides">
 
-            <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)" id="home">
+            <section data-background="#2727e6" id="home">
                 <h3>Welcome to Web Audio!</h3>
-                <div id="vizzie"></div>
-                <div style="position: absolute; width: 10%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left; ">
-                    <a href="#/day-one">Day One</a>
-                    </br>
-                    <a href="#/day-two">Day Two</a>
-                    </br>
-                    <a href="#/day-three">Day Three</a>
-                </div>
+                <a href="#/day-one">day one / </a>
+                <a href="#/day-two">day two / </a>
+                <a href="#/day-three">day three</a>
             </section>
 
-            <section data-background="linear-gradient(to top, #1d6172, #9cdf7c)">
+            <section data-background="#2727e6">
                 <h2>Intros</h2>
                 <p>Share a favorite / memorable audio experience from the past 1-2 weeks</p>
             </section>
 
-            <section data-background="linear-gradient(to top, #1d6172, #9cdf7c)">
+            <section data-background="#2727e6">
                 <h3>Contact</h3>
                 <p>mattbriannelson@gmail.com</p>
-                <p>@mattholamieux:grayarea.org</p>
+                <p>mattholamieux#9634 on discord</p>
                 <p>https://github.com/mattholamieux</p>
             </section>
 
             <section>
-                <section data-background="linear-gradient(to top, #1d6172, #9cdf7c)">
+                <section data-background="#2727e6">
                     <h2>What you will need</h2>
                     <ul>
                         <li><a href="https://cdnjs.com/libraries/tone">Tone.js Library</a></li>
@@ -59,13 +54,13 @@
                         <li>Headphones</li>
                     </ul>
                 </section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
+                <section data-background="#2727e6">
                     <h2><a href="https://editor.p5js.org/mbnelson86/sketches/NH3HpHQQv">Pre-Configured Web IDE</a></h2>
                     <h4>with p5.js and Tone.js</h4>
                 </section>
             </section>
 
-            <section id="day-one" data-background="linear-gradient(to top, #1d6172, #9cdf7c)">
+            <section id="day-one" data-background="#2727e6">
                 <h2>Web Audio: Day One</h2>
                 <h3>Synthesis & Sequencing</h3>
                 <div style="position: absolute; width: 5%; right: 0; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(2, 1, 1, 0.375); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
@@ -73,33 +68,23 @@
                 </div>
             </section>
 
-            <section data-background="linear-gradient(to top, #1d6172, #9cdf7c)">
+            <section data-background="#2727e6">
                 <h2>Learning Objectives</h2>
                 <ul>
+                    <li>Set up our coding environment for building web audio projects</li>
                     <li>Describe the basic building blocks of a synthesizer</li>
                     <li>Synthesize and manipulate sounds with code</li>
-                    <li>Sequence musical events in the browser</li>
-                    <li>Visualize musical events with P5.js</li>
-                </ul>
-            </section>
-
-            <section data-background="linear-gradient(to top, #1d6172, #9cdf7c)">
-                <h2>Agenda</h2>
-                <ul>
-                    <li>Intros</li>
-                    <li>Setting up your environment</li>
-                    <li>Fundamentals of digital audio synthesis with Tone.js</li>
-                    <li>Sequencing note events with Tone.js</li>
-                    <li>Connecting our sequence to p5.js</li>
-                    <li>Mini-project #1: polyrhythmic loop</li>
+                    <li>Compare synthesis and sampling</li>
                 </ul>
             </section>
 
             <section>
-                <section data-background="linear-gradient(to top, #1d6172, #9cdf7c)">What we'll be building ⤵</section>
+                <section data-background="#2727e6">What we'll be building ⤵</section>
                 <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/ST4zy-bni" data-background-interactive>
                 </section>
             </section>
+
+            <!-- BEGINNING OF INTRO TO SYNTHESIS SECTION -->
 
             <section>
                 <div class="tenor-gif-embed" data-postid="25567014" data-share-method="host" data-aspect-ratio="1.33333" data-width="100%"><a href="https://tenor.com/view/lets-make-some-noise-gif-25567014">Lets Make Some
@@ -109,7 +94,7 @@
             </section>
 
             <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
+                <section data-background="#2727e6">
                     <h2>Hello Tone</h2>
                     <pre data-id="code-animation">
                         <code class="hljs" data-trim data-line-numbers="2|4">
@@ -127,7 +112,7 @@
             </section>
 
             <section>
-                <section data-background-gradient="linear-gradient(to top, #fafa6e, #9cdf7c)">
+                <section data-background="#2727e6">
                     <div>
                         <div id="confused_dog" class="tenor-gif-embed" data-postid="26290638" data-share-method="host" data-aspect-ratio="1" data-width="30%"><a href="https://tenor.com/view/confused-dog-gif-26290638">Confused Dog Sticker</a>from <a href="https://tenor.com/search/confused+dog-stickers">Confused Dog Stickers</a></div>
                     </div>
@@ -135,12 +120,12 @@
                     <img data-src="./assets/audio_context_warning.png">
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #fafa6e, #9cdf7c)">
+                <section data-background="#2727e6">
                     <img src="./assets/tone_start.png">
                     <p><a href="https://tonejs.github.io/">https://tonejs.github.io/</a></p>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
+                <section data-background="#2727e6">
                     <p>Let's use P5 to add buttons. </p>
                     <ul>
                         <li>We'll use one button to call Tone.start() and trigger the note onset</li>
@@ -160,15 +145,15 @@
             </section>
 
             <section>
-                <section data-background-gradient="linear-gradient(to top, #fa1abe, #9cdf7c) ">
+                <section data-background="#2727e6">
                     What is a synth?
                 </section>
-                <section data-background-gradient="linear-gradient(to top, #fa1abe, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <div>
                         <img src="./assets/subphatty.png " style="width: 800px ">
                     </div>
                 </section>
-                <section data-background-gradient="linear-gradient(to top, #fa1abe, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <div>
                         <img src=" ./assets/subtractive-synth.jpg " style="width: 80%">
                     </div>
@@ -181,7 +166,7 @@
             </section>
 
             <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Oscillator Types</h3>
                     <img src="https://lumen-app.com/guide/oscillators/images/wave-types.png "></iframe>
                     <div>
@@ -195,7 +180,7 @@
                     </div>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Oscillator Types</h3>
                     <p>What do you notice about the different sonic qualities (or timbre) of the oscillators?</p>
                 </section>
@@ -203,7 +188,7 @@
             </section>
 
             <section id="Filters ">
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Filters</h3>
                     <img src="https://www.allaboutcircuits.com/uploads/articles/Types_of_Filters.jpg " style="width: 40% "></iframe>
                     <div>
@@ -211,7 +196,7 @@
                     </div>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Creating a Tone.Filter</h3>
                     <pre data-id="code-animation ">
                         <code class="hljs " data-trim data-line-numbers="2|4|6">
@@ -236,7 +221,7 @@
             </section>
 
             <section id="envelope ">
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Amplitude Envelope</h3>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ADSR-envelope.svg/640px-ADSR-envelope.svg.png "></iframe>
                     <div>
@@ -244,13 +229,13 @@
                     </div>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Controlling amplitude in Tone.js</h3>
                     <pre><code data-line-numbers="2-4|6" data-trim>
                         // Set attack, decay, and release values for synth
-                        synth.envelope.attack.value = 0.01;
-                        synth.envelope.decay.value = 0.2;
-                        synth.envelope.release.value = 1;
+                        synth.envelope.attack = 0.01;
+                        synth.envelope.decay = 0.2;
+                        synth.envelope.release = 1;
                         // Trigger the note attack followed by the note release after 0.1 seconds
                         synth.triggerAttackRelease("C4 ", 0.1);
                         </code></pre>
@@ -266,7 +251,7 @@
             </section>
 
             <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Defining multiple synth params</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers>
                         const synth = new Tone.Synth({
@@ -282,12 +267,12 @@
                         </code></pre>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Tone.js includes different synthesis models</h3>
                     <h5>Each has different parameters</h5>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>MonoSynth</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="2-4|5-10|11-15|16-24">
                         const monoSynth = new Tone.MonoSynth({
@@ -318,7 +303,7 @@
                         </code></pre>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>FM Synth</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="2-6|7-11|12-13">
                         const fmSynth = new Tone.FMSynth({
@@ -338,7 +323,7 @@
                         </code></pre>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
+                <section data-background="#2727e6">
                     <h3>DuoSynth</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="2-25|27-50|52-54">
                         const duoSynth = new Tone.DuoSynth({
@@ -399,7 +384,7 @@
                         </code></pre>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Pluck Synth</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers>
                         const pluckSynth = new Tone.PluckSynth({
@@ -416,12 +401,185 @@
                         <p>Re-assign the mySynth variable on line 3 to different synth objects defined in synths.js</p>
                     </div>
                 </section>
+            </section>
+            <!-- END OF INTRO TO SYNTHESIS SECTION -->
 
+            <!-- BEGINNING OF SAMPLING SECTION-->
+
+            <section>
+                <section data-background="#2727e6">
+                    <h4>What is a sampler?</h4>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/E-mu_SP-12.svg">
+                    <div style="position: absolute; width: 40%; right: 0; top: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>a sampler allows music to be made out of any sound recorded by the user, rather than relying on tones generated by oscillators</p>
+                    </div>
+                </section>
+
+                <section data-background="#2727e6">
+                    <p>Samples are any audio files used as the sound source in a sampler</p>
+                    <img src="./assets/samples.png" style="width: 80%">
+                </section>
             </section>
 
+            <section>
+                <section data-background="#2727e6">
+                    <h3>Let's change our Tone.Synth to a Tone.Sampler</h3>
+                </section>
+
+                <section data-background="#2727e6">
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|2-5|6|7-8">
+                        const sampler = new Tone.Sampler({
+                            urls: {
+                                  A1: "A1.mp3",
+                                  A2: "A2.mp3",
+                              },
+                              baseUrl: "https://tonejs.github.io/audio/casio/",
+                              attack: 0,
+                              release: 1
+                          }).toDestination();
+                        </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/h2Z3BXEgX" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Notice that we only define audio files for two notes</p>
+                        <p>Tone.Sampler automatically repitches the samples, making it is possible to play pitches which were not explicitly included</p>
+                        <p>Try changing "casio" in the baseUrl path to "salamander"</p>
+                    </div>
+                </section>
+
+                <section data-background="#2727e6">
+                    <p>These audio files are hosted at <a href="https://github.com/Tonejs/audio" target="_blank">https://github.com/Tonejs/audio</a></p>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/AFw7_cKpU" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Samples can also be loaded from local files</p>
+                        <p>In this example, audio files are uploaded to a /samples sub-directory</p>
+                        <p>Loading local files can take time; include an onload message to indicate when the files have finished loading</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/y5I-_3olG" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Samples can also be unpitched percussion</p>
+                        <p>In this example, we don't want to repitch our samples so we provide the exact path to each file and only use those exact note values in our sequence</p>
+                        <p>The note values no longer correspond to pitch, but rather as a "key" to each unique sample</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/R1XTDZ2yR" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Samples can be anything!</p>
+                        <p>(any audio file that is)</p>
+                    </div>
+                </section>
+            </section>
+            <!-- END OF SAMPLING SECTION-->
+
+            <!-- BEGINNING OF FX SECTION -->
+            <section>
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <h3>Let's add some effects!</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Pedalboard_%28995939579%29.jpg" style="width: 70%;">
+                    <div style="position: absolute; width: 40%; right: 0; top: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Tone.js has many built-in effect objects, including delay, reverb, chorus, & distortion</p>
+                    </div>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="9-13|15|17">
+                    const sampler = new Tone.Sampler({
+                        urls: {
+                              A1: "A1.mp3",
+                              A2: "A2.mp3",
+                          },
+                          baseUrl: "https://tonejs.github.io/audio/casio/"
+                      })
+                      
+                      const delay = new Tone.PingPongDelay({
+                        delayTime: "16n",
+                        feedback: 0.5,
+                        wet: 0.5
+                      })
+                      
+                      sampler.chain(delay);
+                      
+                      delay.toDestination();
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/QwguIIA7V" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Try changing the wet value from a float between 0 and 1</p>
+                        <p>Wet and Dry refer to how much of the source signal is passed through the effect vs how much is passed through unaffected</p>
+                        <p>Now try changing the delay time to other time signature relative values (e.g. "4n")</p>
+                        <p>Finally change the feedback value to a float between 0 and 1. Be careful with higher values!</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/UZLLUB6Dr" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>The reverb effect can provide a sense of sound in a physical space</p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/Zq9ZdEkOd" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Everyone loves distortion!</p>
+                    </div>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>Try applying one of the other effects listed at <a href="https://tonejs.github.io/docs/14.7.77/index.html">https://tonejs.github.io/docs/14.7.77/index.html</a></p>
+                </section>
+
+                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                    <p>We can chain multiple effects together</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1-7|9-13|15-19|20-24|26|28">
+                        const sampler = new Tone.Sampler({
+                            urls: {
+                                  A1: "A1.mp3",
+                                  A2: "A2.mp3",
+                              },
+                              baseUrl: "https://tonejs.github.io/audio/casio/"
+                          })
+                          
+                          const delay = new Tone.PingPongDelay({
+                            delayTime: "16n",
+                            feedback: 0.5,
+                            wet: 0.5
+                          })
+                          
+                          const reverb = new Tone.Reverb({
+                            decay: 3,
+                            preDelay: 0.1,
+                            wet: 0.7
+                          })
+                          
+                          const distortion = new Tone.Distortion({
+                            distortion: 5,
+                            wet: 1
+                          })
+                          
+                          sampler.chain(distortion, delay, reverb);
+                          
+                          reverb.toDestination();
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/_WZeRRQSi" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Try reversing the order of the effects chain to see how it affects the sound</p>
+                        <p>Remember that the final effect in the chain should be connected to the toDestination() method</p>
+                    </div>
+                </section>
+            </section>
+            <!-- END OF FX SECTION -->
+
+            <!-- BEGIN OF SEQUENCING SECTION -->
             <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">Scheduling Events
                 <div>
-
                     <div class="tenor-gif-embed giff" data-postid="25679088" data-share-method="host" data-aspect-ratio="1" data-width="600px"><a href="https://tenor.com/view/happy-dance-music-art-dancing-gif-25679088 ">Happy Dance GIF</a>from <a href="https://tenor.com/search/happy-gifs ">Happy GIFs</a></div>
                     <script type="text/javascript " async src="https://tenor.com/embed.js "></script>
                 </div>
@@ -613,7 +771,7 @@
 
                 <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/jLdUSnbAZ" data-background-interactive>
                     <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>One option is to create two sepearate synths and trigger each with a different sequence</p>
+                        <p>One option is to create two separate synths and trigger each with a different sequence</p>
                         <p>In this example, two synths are defined in synths.js and each sequence triggers a different one</p>
                     </div>
                 </section>
@@ -762,171 +920,9 @@
                 </section>
             </section>
 
-            <section>
-                <section data-background-gradient="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <h4>What is a sampler?</h4>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/E-mu_SP-12.svg">
-                    <div style="position: absolute; width: 40%; right: 0; top: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>a sampler allows music to be made out of any sound recorded by the user, rather than relying on tones generated by oscillators</p>
-                    </div>
-                </section>
 
-                <section data-background-gradient="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <p>Samples are any audio files used as the sound source in a sampler</p>
-                    <img src="./assets/samples.png" style="width: 80%">
-                </section>
-            </section>
 
-            <section>
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <h3>Let's change our Tone.Synth to a Tone.Sampler</h3>
-                </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|2-5|6">
-                        const sampler = new Tone.Sampler({
-                            urls: {
-                                  A1: "A1.mp3",
-                                  A2: "A2.mp3",
-                              },
-                              baseUrl: "https://tonejs.github.io/audio/casio/"
-                          }).toDestination();
-                        </code></pre>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/Rh9GwEvU-" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Notice that we only define audio files for two notes, but our sequence includes other notes not defined in our sampler</p>
-                        <p>Tone.Sampler automatically repitches the samples, making it is possible to play pitches which were not explicitly included</p>
-                        <p>Try changing "casio" in the baseUrl path to "salamander"</p>
-                    </div>
-                </section>
-
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <p>These audio files are hosted at <a href="https://github.com/Tonejs/audio" target="_blank">https://github.com/Tonejs/audio</a></p>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/AFw7_cKpU" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Samples can also be loaded from local files</p>
-                        <p>In this example, audio files are uploaded to a /samples sub-directory</p>
-                        <p>Loading local files can take time; include an onload message to indicate when the files have finished loading</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/y5I-_3olG" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Samples can also be unpitched percussion</p>
-                        <p>In this example, we don't want to repitch our samples so we provide the exact path to each file and only use those exact note values in our sequence</p>
-                        <p>The note values no longer correspond to pitch, but rather as a "key" to each unique sample</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/R1XTDZ2yR" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Samples can be anything!</p>
-                        <p>(any audio file that is)</p>
-                    </div>
-                </section>
-            </section>
-
-            <section>
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <h3>Let's add some effects!</h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Pedalboard_%28995939579%29.jpg" style="width: 70%;">
-                    <div style="position: absolute; width: 40%; right: 0; top: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Tone.js has many built-in effect objects, including delay, reverb, chorus, & distortion</p>
-                    </div>
-                </section>
-
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="9-13|15|17">
-                    const sampler = new Tone.Sampler({
-                        urls: {
-                              A1: "A1.mp3",
-                              A2: "A2.mp3",
-                          },
-                          baseUrl: "https://tonejs.github.io/audio/casio/"
-                      })
-                      
-                      const delay = new Tone.PingPongDelay({
-                        delayTime: "16n",
-                        feedback: 0.5,
-                        wet: 0.5
-                      })
-                      
-                      sampler.chain(delay);
-                      
-                      delay.toDestination();
-                    </code></pre>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/PHYNA_u_I" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Try changing the wet value from a float between 0 and 1</p>
-                        <p>Wet and Dry refer to how much of the source signal is passed through the effect vs how much is passed through unaffected</p>
-                        <p>Now try changing the delay time to other time signature relative values (e.g. "4n")</p>
-                        <p>Finally change the feedback value to a float between 0 and 1. Be careful with higher values!</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/r2_xfkg54" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>The reverb effect can provide a sense of sound in a physical space</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/pJProBpp1" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Everyone loves distortion!</p>
-                    </div>
-                </section>
-
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <p>Try applying one of the other effects listed at <a href="https://tonejs.github.io/docs/14.7.77/index.html">https://tonejs.github.io/docs/14.7.77/index.html</a></p>
-                </section>
-
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <p>We can chain multiple effects together</p>
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1-7|9-13|15-19|20-24|26|28">
-                        const sampler = new Tone.Sampler({
-                            urls: {
-                                  A1: "A1.mp3",
-                                  A2: "A2.mp3",
-                              },
-                              baseUrl: "https://tonejs.github.io/audio/casio/"
-                          })
-                          
-                          const delay = new Tone.PingPongDelay({
-                            delayTime: "16n",
-                            feedback: 0.5,
-                            wet: 0.5
-                          })
-                          
-                          const reverb = new Tone.Reverb({
-                            decay: 3,
-                            preDelay: 0.1,
-                            wet: 0.7
-                          })
-                          
-                          const distortion = new Tone.Distortion({
-                            distortion: 5,
-                            wet: 1
-                          })
-                          
-                          sampler.chain(distortion, delay, reverb);
-                          
-                          reverb.toDestination();
-                    </code></pre>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/TV3MdT_gf" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Try reversing the order of the effects chain to see how it affects the sound</p>
-                        <p>Remember that the final effect in the chain should be connected to the toDestination() method</p>
-                    </div>
-                </section>
-            </section>
 
             <section>
                 <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
