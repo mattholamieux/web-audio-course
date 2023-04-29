@@ -62,7 +62,7 @@
 
             <section id="day-one" data-background="#2727e6">
                 <h2>Web Audio: Day One</h2>
-                <h3>Synthesis & Sequencing</h3>
+                <h3>Synthesis, Sampling, & Effects</h3>
                 <div style="position: absolute; width: 5%; right: 0; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(2, 1, 1, 0.375); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
                     <a href="#/home">home</a>
                 </div>
@@ -71,16 +71,16 @@
             <section data-background="#2727e6">
                 <h2>Learning Objectives</h2>
                 <ul>
-                    <li>Set up our coding environment for building web audio projects</li>
+                    <li>Set up our coding environment for web</li>
                     <li>Describe the basic building blocks of a synthesizer</li>
-                    <li>Synthesize and manipulate sounds with code</li>
                     <li>Compare synthesis and sampling</li>
+                    <li>Apply effects to our sounds</li>
                 </ul>
             </section>
 
             <section>
                 <section data-background="#2727e6">What we'll be building ⤵</section>
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/ST4zy-bni" data-background-interactive>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/full/wYj_osld6" data-background-interactive>
                 </section>
             </section>
 
@@ -241,7 +241,7 @@
                         </code></pre>
                 </section>
 
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/RPuNNuvQw " data-background-interactive>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/RPuNNuvQw" data-background-interactive>
                     <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
                         <p>Try changing the attack, decay, and release times on lines 10-12</p>
                         <p>Then try changing the sustain time on line 33 (second argument to triggerAttackRelease)</p>
@@ -267,6 +267,13 @@
                         </code></pre>
                 </section>
 
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/n6J-N6ziB" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>We define our synth object in a separate file to keep things tidy</p>
+                    </div>
+                </section>
+            </section>
+            <section>
                 <section data-background="#2727e6">
                     <h3>Tone.js includes different synthesis models</h3>
                     <h5>Each has different parameters</h5>
@@ -402,6 +409,25 @@
                     </div>
                 </section>
             </section>
+
+            <section>
+                <section data-background="#2727e6">
+                    <div style="margin-top: 150px;">
+                        <h4>Coding Challenge</h4>
+                        <p>How can we trigger the synth using our computer keyboard?</p>
+                    </div>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Hint: check out the p5js documentation for <a href="https://p5js.org/reference/#/p5/key">key</a> and <a href="https://p5js.org/reference/#/p5/keyPressed">keyPressed()</a></p>
+                    </div>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/dASboapd5" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>This is one of many possible approaches</p>
+                    </div>
+                </section>
+
+            </section>
             <!-- END OF INTRO TO SYNTHESIS SECTION -->
 
             <!-- BEGINNING OF SAMPLING SECTION-->
@@ -479,7 +505,7 @@
 
             <!-- BEGINNING OF FX SECTION -->
             <section>
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <h3>Let's add some effects!</h3>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Pedalboard_%28995939579%29.jpg" style="width: 70%;">
                     <div style="position: absolute; width: 40%; right: 0; top: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
@@ -487,7 +513,7 @@
                     </div>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="9-13|15|17">
                     const sampler = new Tone.Sampler({
                         urls: {
@@ -513,9 +539,13 @@
                     <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
                         <p>Try changing the wet value from a float between 0 and 1</p>
                         <p>Wet and Dry refer to how much of the source signal is passed through the effect vs how much is passed through unaffected</p>
-                        <p>Now try changing the delay time to other time signature relative values (e.g. "4n")</p>
+                        <p>Now try changing the delay time to other time signature relative values (e.g. "4n", "8n.", or "1m")</p>
                         <p>Finally change the feedback value to a float between 0 and 1. Be careful with higher values!</p>
                     </div>
+                </section>
+
+                <section data-background="#2727e6">
+                    <p>For more info about time values in Tone.js, see <a href="https://github.com/Tonejs/Tone.js/wiki/Time">https://github.com/Tonejs/Tone.js/wiki/Time</a></p>
                 </section>
 
                 <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/UZLLUB6Dr" data-background-interactive>
@@ -530,11 +560,12 @@
                     </div>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
+                    <h2>Coding Challenge</h2>
                     <p>Try applying one of the other effects listed at <a href="https://tonejs.github.io/docs/14.7.77/index.html">https://tonejs.github.io/docs/14.7.77/index.html</a></p>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <p>We can chain multiple effects together</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1-7|9-13|15-19|20-24|26|28">
                         const sampler = new Tone.Sampler({
@@ -576,17 +607,51 @@
                 </section>
             </section>
             <!-- END OF FX SECTION -->
+            <!-- END OF DAY ONE-->
 
-            <!-- BEGIN OF SEQUENCING SECTION -->
-            <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">Scheduling Events
-                <div>
-                    <div class="tenor-gif-embed giff" data-postid="25679088" data-share-method="host" data-aspect-ratio="1" data-width="600px"><a href="https://tenor.com/view/happy-dance-music-art-dancing-gif-25679088 ">Happy Dance GIF</a>from <a href="https://tenor.com/search/happy-gifs ">Happy GIFs</a></div>
-                    <script type="text/javascript " async src="https://tenor.com/embed.js "></script>
+            <!-- BEGINNING OF DAY TWO -->
+            <section id="day-two" data-background="#2727e6">
+                <h2>Web Audio: Day Two</h2>
+                <h3>Sequencing & UI</h3>
+                <div style="position: absolute; width: 5%; right: 0; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(2, 1, 1, 0.375); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                    <a href="#/home">home</a>
                 </div>
             </section>
 
+            <section data-background="#2727e6">
+                <h2>Learning Objectives</h2>
+                <ul>
+                    <li>Sequence musical events</li>
+                    <li>Build simple GUIs to control sequences and parameters</li>
+                </ul>
+            </section>
+
             <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)">
+                <section data-background="#2727e6">What we'll be building ⤵</section>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/XAPSjs7qS" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>what looks familiar from day one?</p>
+                        <p>what looks unfamiliar? what do you have questions about?</p>
+                    </div>
+                </section>
+            </section>
+
+            <!-- BEGIN OF SEQUENCING SECTION -->
+            <section>
+                <section data-background="#2727e6">Scheduling Events
+                    <div>
+                        <div class="tenor-gif-embed giff" data-postid="25679088" data-share-method="host" data-aspect-ratio="1" data-width="600px"><a href="https://tenor.com/view/happy-dance-music-art-dancing-gif-25679088 ">Happy Dance GIF</a>from <a href="https://tenor.com/search/happy-gifs ">Happy GIFs</a></div>
+                        <script type="text/javascript " async src="https://tenor.com/embed.js "></script>
+                    </div>
+                </section>
+                <section data-background="#2727e6">Starter Code
+                    <p>Make a copy of <a href="https://editor.p5js.org/mbnelson86/sketches/4-aM5nx8h" target="_blank"><b><em>this p5js sketch</em></b></a> as your starting point for today</p>
+
+                </section>
+            </section>
+
+            <section>
+                <section data-background="#2727e6">
                     <h3>Time in Tone.js</h3>
                     <a href="https://github.com/Tonejs/Tone.js/wiki/Time " target="_blank">https://github.com/Tonejs/Tone.js/wiki/Time </a>
                 </section>
@@ -601,7 +666,7 @@
 
             <section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Tone.Loop</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|2|3|5">
                         const myLoop = new Tone.Loop((time) => {
@@ -611,7 +676,7 @@
                           Tone.Transport.start();
                         </code></pre>
                 </section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>BPM</h3>
                     <p>We can change the tempo with Tone.Transport.bpm</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers>
@@ -621,12 +686,12 @@
 
                 <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/m-ELgsZmX" data-background-interactive>
                     <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Notice that everything in our callback function on lines 8-10 repeats at the rate defined on line 11</p>
-                        <p>Try changing the bpm value on line 5</p>
+                        <p>Notice that everything in our callback function on lines 6-8 repeats at the rate defined on line 9</p>
+                        <p>Try changing the bpm value on line 3</p>
                     </div>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Learn more about callback functions</h3>
                     <ul>
                         <li><a href="https://www.freecodecamp.org/news/what-is-a-callback-function-in-javascript/" target="_blank">FreeCodeCamp article</a></li>
@@ -637,7 +702,7 @@
 
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Playing a Melody</h3>
                     <p>Given the following array of note values, how can we program our loop to play a different note each time?</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers>
@@ -645,7 +710,7 @@
                         </code></pre>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Option One</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="2|5|6|7|8-10">
                         const notes = ["C3", "D3", "G3", "A3", "C4", "E4"];
@@ -662,7 +727,7 @@
                         </code></pre>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Option Two</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="2|5|7">
                         const notes = ["C3", "D3", "G3", "A3", "C4", "E4"];
@@ -686,7 +751,7 @@
                     </div>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)" id="fragments">
+                <section data-background="#2727e6" id="fragments">
                     <h3>Rests</h3>
                     <p>How might we add rests (pauses) to our sequence?</p>
                     <pre data-id="code-animation" class="fragment"><code class="hljs " data-trim data-line-numbers="1|6" >
@@ -708,7 +773,7 @@
             </section>
 
             <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Tone.Pattern</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|2|3|5">
                         const pattern = new Tone.Pattern((time, note) => {
@@ -730,7 +795,7 @@
             </section>
 
             <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Tone.Sequence</h3>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|2|3">
                         const seq = new Tone.Sequence((time, note) => {
@@ -750,11 +815,11 @@
 
 
             <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <h3>Playing multiple sequences simultaneously</h3>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <p>We can't trigger the same synth twice at the same time</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1-3|5-8|9">
                         const seq1 = new Tone.Sequence((time, note) => {
@@ -776,7 +841,7 @@
                     </div>
                 </section>
 
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
+                <section data-background="#2727e6">
                     <p>Another option is to pass our synth as an argument to Tone.PolySynth()</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|2-10">
                         const polySynth = new Tone.PolySynth(Tone.Synth, {
@@ -799,138 +864,17 @@
                         <a href="https://www.perfectcircuit.com/signal/synthesizer-polyphony" target="_blank">for more on polyphony, check out https://www.perfectcircuit.com/signal/synthesizer-polyphony</a>
                     </div>
                 </section>
-
             </section>
+            <!--END OF SEQUENCING SECTION-->
 
+            <!--BEGINNING OF UI SECTION-->
             <section>
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
-                    <h3>Mini Project #1</h3>
-                    <p>Create a polyrhythmic sequence</p>
-                </section>
-
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c)" id="fragments">
-                    <h3>Parameters</h3>
-                    <ul>
-                        <li class="fragment">Should include more than 1 Tone.Loop, Tone.Pattern, or Tone.Sequence</li>
-                        <li class="fragment">The result should be polyrhythmic (i.e. combine multiple contrasting rhythms)</li>
-                        <li class="fragment">Bonus: Add a visual component to your sequence</li>
-                    </ul>
-                </section>
-
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
-                    <p>Visualize Amplitude</p>
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="2-3|7|10-14">
-                        // Connect the synth to Tone.Waveform
-                        const waveform = new Tone.Waveform();
-                        synth.connect(waveform);
-
-                        function draw(){
-                            // get amplitude values as array
-                            const values = waveform.getValue();
-
-                            // draw a rect for each array value and map width to the value
-                            for (let i = 0; i < values.length; i++) {
-                                const amplitude = values[i];
-                                let w = amplitude * 200;
-                                rect(width/2, height/2, w);
-                            }
-                        }
-                        </code></pre>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/RHKSCuuNr" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>visualizing amplitude</p>
-                    </div>
-                </section>
-
-                <section data-background-gradient="linear-gradient(to top, #1d6172, #9cdf7c) ">
-                    <p>Visualize Pitch</p>
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|4|5|11">
-                        let circleX = 200;
-                        const seq = new Tone.Sequence((time, note) => {
-                            synth.triggerAttackRelease(note, "16n", time, random(1));
-                            let hertz = Tone.Frequency(note).toFrequency();
-                            circleX = map(hertz, 0, 1000, 0, width);
-                        }, ["C4", ["E4", "D4", "C3", "G5"], "G4", ["A4", "G4"]], "2n").start(0);
-
-                        function draw() {
-                            background(0);
-                            fill(255);
-                            ellipse(circleX, 100, 20);
-                        }
-                        </code></pre>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>Tone.Frequency() can be used to convert notes (e.g. "C4") to frequency values</p>
-                        <p>For a note::frequency conversion chart, see https://pages.mtu.edu/~suits/notefreqs.html</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/rdCRwBc4T" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>visualizing pitch</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/yTnV0s3xf" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>In this final example, each circle's x position is determined by the current position of each loop as defined by the "step" variable</p>
-                        <p>Each loop references the same notes array, but with different intervals and delay times (e.g. line 30)</p>
-                        <p>Only the first loop plays through the entire notes array. Notice, for example, how line 23 uses notes.length-5 as the divisor</p>
-                    </div>
-                </section>
-            </section>
-
-
-            <section id="day-two" data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                <h2>Web Audio: Day Two</h2>
-                <h3>Samples, Effects, & UI</h3>
-                <div style="position: absolute; width: 5%; right: 0; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(2, 1, 1, 0.375); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                    <a href="#/home">home</a>
-                </div>
-            </section>
-
-            <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                <h2>Learning Objectives</h2>
-                <ul>
-                    <li>Compare/contrast sampling to synthesis</li>
-                    <li>Add effects to our sounds</li>
-                    <li>Build simple GUIs to control sequences and parameters</li>
-                </ul>
-            </section>
-
-            <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                <h2>Agenda</h2>
-                <ul>
-                    <li>Day One review</li>
-                    <li>Fundamentals of sample playback with Tone.js</li>
-                    <li>Applying effects to our sound</li>
-                    <li>Building simple UIs with p5.touchgui</li>
-                    <li>Mini-project #2: step sequencer</li>
-                </ul>
-            </section>
-
-            <section>
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">What we'll be building ⤵</section>
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/XAPSjs7qS" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>what looks familiar from day one?</p>
-                        <p>what looks unfamiliar? what do you have questions about?</p>
-                    </div>
-                </section>
-            </section>
-
-
-
-
-
-            <section>
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <h3>Controlling params with UI</h3>
                     <p>Let's use p5.js to control synth parameters in real time</p>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <p>Using p5's mouseX and mouseY variables</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="2-3">
                         function draw(){
@@ -948,7 +892,7 @@
                     </div>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <p>Using key presses</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1-4|6|9|10|12|13|15">
                         const myDistort = new Tone.Distortion({
@@ -976,9 +920,7 @@
                     </div>
                 </section>
 
-
-
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <p>Using sliders</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|4-6|10">
                     let slider;
@@ -1001,17 +943,17 @@
                     </div>
                 </section>
             </section>
+            <!--END OF UI SECTION-->
 
-
-
+            <!--BEGINNING OF SEQUENCER CODE ALONG-->
             <section>
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <h3>Mini Project #2</h3>
+                <section data-background="#2727e6">
+                    <h3>Project Code Along</h3>
                     <p>Create a programmable drum machine</p>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Four_to_the_floor_Roland_TR-707.svg">
                 </section>
 
-                <section data-background-gradient="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)" id="fragments">
+                <section data-background="#2727e6" id="fragments">
                     <h3>Parameters</h3>
                     <ul>
                         <li class="fragment">Should include 6 rows of 12 checkboxes</li>
@@ -1022,20 +964,19 @@
                     </ul>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <a href="https://editor.p5js.org/mbnelson86/sketches/gbTC3yBdF">Starter Code</a>
+                <section data-background="#2727e6">
+                    <a href="https://editor.p5js.org/mbnelson86/sketches/gbTC3yBdF" target="_blank">Starter Code</a>
                 </section>
 
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <p>Create a row of checkboxes</p>
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="5-6|16|17|18|19">
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="5|15|16|17|18">
                         let startButton;
                         let stopButton;
                         const notes = ["A1", "B1", "C1", "D1", "E1", "F1"];
                         let index = 0;
                         let row = [];
-                        const rowLength = 12;
                         
                         function setup() {
                           createCanvas(400, 400);
@@ -1045,61 +986,68 @@
                           stopButton.mousePressed(stopTransport);
                           
                           // Create checkboxes and push to row array
-                          for (let i = 0; i < rowLength; i++) {
+                          for (let i = 0; i < 12; i++) {
                             let cb = createCheckbox();
-                            cb.position(i * 20 + 25, j * 20 + 60);
+                            cb.position(i * 20 + 25, 20);
                             row.push(cb);
                           }
                         }   
                     </code></pre>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <p>Create a Tone.Loop to cycle through checkboxes and check if "checked"</p>
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|4|5|6-8|9">
-                        let step = 0;
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|4|5-7|8|9-11">
+                        let index = 0;
                         
                         const loop = new Tone.Loop((time) => {
-                            let step = index % rowLength;
-                            let cb = row[step];
-                            if (cb.checked()) {
+                            let currentStep = row[index];
+                            if (currentStep.checked()) {
                               sampler.triggerAttackRelease(notes[0], "8n", time);
                             }
                             index++;
-                          }, "8n").start(0);
+                            if (index > row.length-1){
+                                index = 0;
+                            }
+                        }, "8n").start(0);
                     </code></pre>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
-                    <p>Visually highlight the current step</p>
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="5-7|8-9">
-                        let step = 0;
-                        
-                        const loop = new Tone.Loop((time) => {
-                            let step = index % rowLength;
-                            for (let box of row) {
-                                box.style('background-color', 'gray');
-                            }
-                            let cb = row[step];
-                            cb.style('background-color', 'blue');
-                            if (cb.checked()) {
-                              sampler.triggerAttackRelease(notes[0], "8n", time);
-                            }
-                            index++;
-                          }, "8n").start(0);
-                    </code></pre>
-                    <div style="position: absolute; width: 40%; right: 0; font-size: 14px">
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">Read more about for.. of loops</a>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/oTq55hHbB" data-background-interactive>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/Pb57y9nJU" data-background-interactive>
                     <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
                         <p>Start the transport and click the checkboxes to trigger the sampler</p>
                     </div>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
+                    <p>Visually highlight the current step</p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="4-6|8">
+                        let step = 0;
+                        
+                        const loop = new Tone.Loop((time) => {
+                            for (let i = 0; i < row.length; i++) {
+                                row[i].style("background-color", "gray");
+                            }
+                            let currentStep = row[index];
+                            currentStep.style("background-color", "coral")
+                            if (currentStep.checked()) {
+                              sampler.triggerAttackRelease(notes[0], "8n", time);
+                            }
+                            index++;
+                            if (index > row.length-1){
+                                index = 0;
+                            }
+                        }, "8n").start(0);
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/MEWO_gYSy" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Start the transport and click the checkboxes to trigger the sampler</p>
+                    </div>
+                </section>
+
+                <section data-background="#2727e6">
                     <p>Create six rows of checkboxes</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="5-7|16|17|18-22|23">
                         let startButton;
@@ -1130,25 +1078,22 @@
                     </code></pre>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <p>Check if the boxes for the current step are checked <b>in each row</b></p>
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="4|10">
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="2|3|4|5|6-8|2-9|10-13">
                         const loop = new Tone.Loop((time) => {
-                            let step = index % rowLength;
-                            
-                            for (let row of grid) {
-                                for (let box of row) {
-                                    box.style("background-color", "gray");
-                                }
-                                let cb = row[step];
-                                cb.style("background-color", "blue");
-                                let note = notes[grid.indexOf(row)];
-                                if (cb.checked()) {
-                                    sampler.triggerAttackRelease(note, "8n", time);
-                                }
+                            for (let i = 0; i < numRows; i++) {
+                              let currentRow = grid[i];
+                              let currentStep = currentRow[index];
+                              let note = notes[grid.indexOf(currentRow)];
+                              if (currentStep.checked()) {
+                                sampler.triggerAttackRelease(note, "8n", time);
+                              }
                             }
-
                             index++;
+                            if (index > rowLength-1) {
+                              index = 0;
+                            }
                         }, "8n").start(0);
                     </code></pre>
                     <div style="position: absolute; width: 40%; right: 0; top: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
@@ -1156,13 +1101,44 @@
                     </div>
                 </section>
 
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/wQ0xMvf21" data-background-interactive>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/-XtHTv94a" data-background-interactive>
                     <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
                         <p>Start the transport and click the checkboxes to trigger the sampler</p>
                     </div>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
+                    <p>Highlight current steps</b>
+                    </p>
+                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="4-6|8">
+                        const loop = new Tone.Loop((time) => {
+                            for (let i = 0; i < numRows; i++) {
+                              let currentRow = grid[i];
+                              for (let j = 0; j < rowLength; j++) {
+                                currentRow[j].style("background-color", "gray");
+                              }
+                              let currentStep = currentRow[index];
+                              currentStep.style("background-color", "coral");
+                              let note = notes[grid.indexOf(currentRow)];
+                              if (currentStep.checked()) {
+                                sampler.triggerAttackRelease(note, "8n", time);
+                              }
+                            }
+                            index++;
+                            if (index > rowLength-1) {
+                              index = 0;
+                            }
+                        }, "8n").start(0);
+                    </code></pre>
+                </section>
+
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/iTmwRsalm" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Start the transport and click the checkboxes to trigger the sampler</p>
+                    </div>
+                </section>
+
+                <section data-background="#2727e6">
                     <p>Create four sliders</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="8|29-34">
                         let startButton;
@@ -1203,7 +1179,7 @@
                     </code></pre>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <p>Control FX params with sliders</p>
                     <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="3-5">
                         function draw() {
@@ -1222,7 +1198,7 @@
                     </div>
                 </section>
 
-                <section data-background-gradient="linear-gradient(90deg, rgba(167,136,41,1) 0%, rgba(180,86,161,1) 100%)" id="fragments">
+                <section data-background="#2727e6" id="fragments">
                     <h3>Taking it further</h3>
                     <ul>
                         <li class="fragment">Add a button that clears all checkboxes</li>
@@ -1234,261 +1210,117 @@
                     </ul>
                 </section>
             </section>
+            <!--END OF SEQUENCER CODE ALONG-->
+            <!--END OF DAY TWO-->
 
-            <section id="day-three" data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+            <!--BEGINNING OF DAY THREE-->
+            <section id="day-three" data-background="#2727e6">
                 <h2>Web Audio: Day Three</h2>
-                <div>
-                    <p>Take <a href="https://forms.gle/wYMYAFHVpwhVJpPX9" style="color:coral" target="_blank">the survey</a> to help decide what topic we cover on Saturday</p>
-                </div>
+                <h3>Visualizing Audio</h3>
                 <div style="position: absolute; width: 5%; right: 0; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(2, 1, 1, 0.375); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
                     <a href="#/home">home</a>
                 </div>
             </section>
 
-            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                <h2>Data Sonification</h2>
+            <section data-background="#2727e6">
+                <h2>Learning Objectives</h2>
                 <ul>
-                    <li>Load data from external APIs</li>
-                    <li>Map arbitrary data to musical parameters</li>
+                    <li>Visualize audio using amplitude and frequency data</li>
+                    <li>Connect musical events to p5js animations</li>
                 </ul>
             </section>
 
-            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                <h2>Data Sonification</h2>
-                <p>Is another way of conveying information.</p>
-                <div style="position: absolute; width: 60%; right: 0; top: 300px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 22px; text-align: left; ">
-                    <p>"When you present data, you usually use visual cues to show the analysis of your work. But in this case, you use sound to make something easier to understand."</p>
-                    <p><a href="https://towardsdatascience.com/sonification-when-you-go-beyond-the-visual-representation-of-data-cf6c7229a557">Sonification — When You Go Beyond the Visual Representation Of Data</a></p>
-                </div>
-            </section>
-
-            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Portable_Geiger_counter_series_900_mini-monitor.jpg">
-            </section>
-
-            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                <iframe src="https://player.vimeo.com/video/528822742?h=3f4f36540d" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                <p><a href="https://vimeo.com/528822742">OpenSpace Sonification</a> from <a href="https://vimeo.com/user136419958">Anonymous</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-            </section>
-
-            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                <video controls width="250" style="width: 80%">
-                    <source src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Air_Play_-_Sonification_of_Beijing_Air_Quality_Data.webm"
-                            type="video/webm">
-                </video>
-            </section>
-
             <section>
-
-                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                    <h4>Where should we get our data?</h4>
-                    <ul>
-                        <li><a href="https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/">https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/</a></li>
-                        <li><a href="https://apipheny.io/free-api/">https://apipheny.io/free-api/</a></li>
-                        <li><a href="https://github.com/public-apis/public-apis">https://github.com/public-apis/public-apis</a></li>
-                    </ul>
+                <section data-background="#2727e6">
+                    <h3>Visualizing Audio</h3>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                    <h4>Highly recommended YT course for anyone new to data and APIs</h4>
-                    <p><a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X">Coding Train: Working with Data and APIs in JavaScript</a></p>
+                <section data-background="#2727e6">
+                    <p>Visualize Amplitude</p>
+                    <pre data-id=" code-animation "><code class="hljs " data-trim data-line-numbers="3-5 ">
+                        // Connect the synth to Tone.Waveform
+                        const waveform = new Tone.Waveform();
+                        synth.connect(waveform);
+
+                        function draw(){
+                            // get amplitude values as array
+                            const values = waveform.getValue();
+
+                            // draw a rect for each array value and map width to the value
+                            for (let i = 0; i < values.length; i++) {
+                                const amplitude = values[i];
+                                let w = amplitude * 200;
+                                rect(width/2, height/2, w);
+                            }
+                        }
+                    </code></pre>
 
                 </section>
 
-            </section>
-
-            <section>
-
-                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                    <h3>Building a simple weather sonification thingy</h3>
-                    <p>Parameters</p>
-                    <ul>
-                        <li class="fragment">capture hourly temp and cloud cover forecasts from a weather api</li>
-                        <li class="fragment">loop through the data and trigger a note for each hour</li>
-                        <li class="fragment">map temperature to pitch</li>
-                        <li class="fragment">map filter cutoff to cloud cover</li>
-                    </ul>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/RHKSCuuNr " data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>visualizing amplitude</p>
+                    </div>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                    <a href="https://open-meteo.com/en/docs#api_form">Free Weather API</a>
-                </section>
-
-                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                    <p>Load JSON data via preload() function</p>
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="1|3|4|5">
-                        let url ="https://api.open-meteo.com/v1/forecast?latitude=34.05&longitude=-118.24&hourly=temperature_2m&temperature_unit=fahrenheit&hourly=cloudcover";
-
-                        function preload() {
-                            loadJSON(url, (weatherData) => {
-                                console.log(weatherData);
-                            });
+                <section data-background="#2727e6">
+                    <p>Visualize Frequency</p>
+                    <pre data-id=" code-animation "><code class="hljs " data-trim data-line-numbers="">
+                        
+                        let levels = fft.getValue();
+                        for (let i = 1; i< levels.length;i++){
+                            let binMapped = map(levels[i], -100, 0, height, 0);
+                            stroke(binMapped, binMapped/2, 100);
+                            let thisBin = line(i * 25, height, i * 25, binMapped);
                         }
                     </code></pre>
                 </section>
 
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/CSNi71uqc" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>loadJSON() loads a JSON file from a file or a URL, and returns an Object</p>
-                        <p>This method is asynchronous, meaning it may not finish before the next line in your sketch is executed</p>
-                        <p>P5's preload function is used to handle asynchronous loading of external files in a blocking way. If a preload function is defined, setup() will wait until any load calls within have finished</p>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/jhUrbvDvy " data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>visualizing frequency</p>
                     </div>
                 </section>
 
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/ZFZAnkXeM" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>On lines 9-10, we use dot notation to access the data that we want from the returned object, and assign it to a variable</p>
+                <section data-background="#2727e6">
+                    <p>Visualize Pitch</p>
+                    <pre data-id=" code-animation "><code class="hljs " data-trim data-line-numbers="1|4|5|11 ">
+                        let circleX = 200;
+                        const seq = new Tone.Sequence((time, note) => {
+                            synth.triggerAttackRelease(note, "16n ", time, random(1));
+                            let hertz = Tone.Frequency(note).toFrequency();
+                            circleX = map(hertz, 0, 1000, 0, width);
+                        }, ["C4 ", ["E4 ", "D4 ", "C3 ", "G5 "], "G4 ", ["A4 ", "G4 "]], "2n ").start(0);
+
+                        function draw() {
+                            background(0);
+                            fill(255);
+                            ellipse(circleX, 100, 20);
+                        }
+                        </code></pre>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>Tone.Frequency() can be used to convert notes (e.g. "C4 ") to frequency values</p>
+                        <p>For a note::frequency conversion chart, see https://pages.mtu.edu/~suits/notefreqs.html</p>
                     </div>
                 </section>
 
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/ceAbwE81f" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>On lines 27-36, we use a Tone.Loop to step through the individual array indices and print them to the console</p>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/rdCRwBc4T " data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>visualizing pitch</p>
                     </div>
                 </section>
 
-                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                    <p>Mapping our data to appropriate ranges</p>
-                    <pre data-id="code-animation "><code class="hljs " data-trim data-line-numbers="3-4|5-6|7|8-9">
-                        const notes = ["C2","D2","E2","F2"];
-
-                        let temp = tempArray[index];
-                        let cloudCover = cloudArray[index];
-                        let tempMap = floor(map(temp, 40, 70, 0, notes.length, true));
-                        let cloudMap = floor(map(cloudCover, 0, 100, 6000, 200));
-                        let note = notes[tempMap];
-                        filter.frequency.value = cloudMap;
-                        fmSynth.triggerAttackRelease(note, "1n", time);
-                    </code></pre>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/W7IDcWgX-" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>On lines 31-32, we map temp and cloud values to appropriate ranges for our note and frequency cutoff values</p>
-                        <p>On lines 33-34 we apply the mapped values to note and frequency cutoff</p>
-                        <p>On line 35 we trigger our synth</p>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/yTnV0s3xf " data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
+                        <p>In this final example, each circle's x position is determined by the current position of each loop as defined by the "step " variable</p>
+                        <p>Each loop references the same notes array, but with different intervals and delay times (e.g. line 30)</p>
+                        <p>Only the first loop plays through the entire notes array. Notice, for example, how line 23 uses notes.length-5 as the divisor</p>
                     </div>
-                </section>
-
-            </section>
-
-
-            <section>
-                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                    <h3>Building an rgb synth</h3>
-                    <p>Parameters</p>
-                    <ul>
-                        <li class="fragment">load a random image via https://picsum.photos/</li>
-                        <li class="fragment">display image on canvas</li>
-                        <li class="fragment">loop through x and y positions and extrac r,g,b values</li>
-                        <li class="fragment">map r,g,b values to notes for 3 note chords</li>
-                    </ul>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/5f5eofgCj" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>On line 10 we load a random image from the API</p>
-                        <p>On line 23 we draw the image to the canvas</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/U_WHuk0pv" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>On line 25 we use the .get method to extract RGB values at mouseX/Y position</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/JxOZdZUV3" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>In this example, we use a Tone.Loop to update the x and y position that we're passing to the .get method</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/dkQy74QMq" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>On lines 29-31, we map each r,g,b value to a range between 0 and the length of the notes array</p>
-                        <p>On lines 32-34, we choose a note from the notes array for each mapped r,g,b value</p>
-                        <p>On lines 35-37, we trigger our polyphonic synth three times, passing each note to form a chord</p>
-                    </div>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/fFEOTVM8c" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>For extra fun, we've added functions to invert each r,g,b value individually via key presses (check out filters.js)</p>
-                        <p>This code has been remixed from https://idmnyu.github.io/p5.js-image/Filters/index.html</p>
-                        <p>We've also added some delay, bcuz delay makes everything sound cool</p>
-                    </div>
-                </section>
-
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                <h2>Generative Techniques</h2>
-                <ul>
-                    <li>Utilize randomness to generate melodies and rhythms</li>
-                    <li>Trigger and control musical events with animations</li>
-                </ul>
-            </section>
-
-            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                <h2>Generative Music</h2>
-                <p>a term popularized by Brian Eno to describe music that is ever-different and changing, and that is created by a system.</p>
-                <div style="position: absolute; width: 60%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 22px; text-align: left; ">
-                    <p>"I wanted something that had an organic quality to it. Had some sense of movement and change. Every time you played it something slightly different happened."</p>
-                </div>
-            </section>
-
-            <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)" <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Wchime.jpg" style="width: 50%">
-            </section>
-
-            <section>
-                <section id="day-three" data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
-                    <h2>Randomness</h2>
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/7CmnG84Z1" data-background-interactive>
-                    <!-- <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p></p>
-                    </div> -->
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/RSEl6S1jK" data-background-interactive>
-                    <!-- <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p></p>
-                    </div> -->
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/Wf3BfnxSh" data-background-interactive>
-                    <!-- <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p></p>
-                    </div> -->
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/A9-QjcQFi" data-background-interactive>
-                    <!-- <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p></p>
-                    </div> -->
-                </section>
-
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/5u5pQBJ3S" data-background-interactive>
-                    <!-- <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(57, 50, 50, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p></p>
-                    </div> -->
                 </section>
             </section>
 
             <section>
-                <section data-background="linear-gradient(90deg, rgba(102,69,98) 0%, rgba(80,86,161,1) 100%)">
+                <section data-background="#2727e6">
                     <h2>Animation -> Sound</h2>
                 </section>
 
@@ -1509,8 +1341,6 @@
                         <p></p>
                     </div> -->
                 </section>
-
-
             </section>
 
 
@@ -1532,7 +1362,7 @@
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
     </script>
-    <script src="js/sketch.js"></script>
+    <script src="js/sketch.js "></script>
 </body>
 
 </html>
