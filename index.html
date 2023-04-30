@@ -628,11 +628,7 @@
 
             <section>
                 <section data-background="#2727e6">What we'll be building ⤵</section>
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/XAPSjs7qS" data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; top: 400px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
-                        <p>what looks familiar from day one?</p>
-                        <p>what looks unfamiliar? what do you have questions about?</p>
-                    </div>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/full/XAPSjs7qS" data-background-interactive>
                 </section>
             </section>
 
@@ -1225,9 +1221,30 @@
             <section data-background="#2727e6">
                 <h2>Learning Objectives</h2>
                 <ul>
+                    <li>Stream audio files with Tone.Player</li>
                     <li>Visualize audio using amplitude and frequency data</li>
                     <li>Connect musical events to p5js animations</li>
                 </ul>
+            </section>
+
+            <section>
+                <section data-background="#2727e6">
+                    <h3>Streaming Audio</h3>
+                </section>
+
+                <section data-background="#2727e6">
+                    <p>Tone.Player</p>
+                    <pre data-id=" code-animation "><code class="hljs " data-trim data-line-numbers="">
+                        const player = new Tone.Player({
+                            loop: true,
+                            url:  "loop4.mp3",
+                            onload: () => {
+                              console.log('loaded')
+                            }
+                          }).toDestination();
+                    </code></pre>
+                </section>
+
             </section>
 
             <section>
@@ -1237,27 +1254,23 @@
 
                 <section data-background="#2727e6">
                     <p>Visualize Amplitude</p>
-                    <pre data-id=" code-animation "><code class="hljs " data-trim data-line-numbers="3-5 ">
-                        // Connect the synth to Tone.Waveform
+                    <pre data-id=" code-animation "><code class="hljs " data-trim data-line-numbers="">
                         const waveform = new Tone.Waveform();
-                        synth.connect(waveform);
+                        player.connect(waveform);
 
                         function draw(){
-                            // get amplitude values as array
                             const values = waveform.getValue();
 
-                            // draw a rect for each array value and map width to the value
                             for (let i = 0; i < values.length; i++) {
                                 const amplitude = values[i];
-                                let w = amplitude * 200;
+                                let w = amplitude * 800;
                                 rect(width/2, height/2, w);
                             }
                         }
                     </code></pre>
-
                 </section>
 
-                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/RHKSCuuNr " data-background-interactive>
+                <section data-background-iframe="https://editor.p5js.org/mbnelson86/sketches/uBTRjWZIE" data-background-interactive>
                     <div style="position: absolute; width: 40%; right: 0; top: 500px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 10px; font-size: 14px; text-align: left; ">
                         <p>visualizing amplitude</p>
                     </div>
@@ -1343,6 +1356,16 @@
                 </section>
             </section>
 
+            <section>
+                <section data-background="#2727e6">
+                    <h3>Putting it all together</h3>
+                </section>
+
+                <section data-background="#2727e6">
+                    <h3>Independent work</h3>
+                    <p>Create an audio/visual sketch using Tone.js and p5.js</p>
+                </section>
+            </section>
 
         </div>
     </div>
