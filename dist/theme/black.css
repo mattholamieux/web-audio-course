@@ -318,7 +318,7 @@ section.has-light-background h6 {
  *********************************************/
 
 .reveal a {
-    color: white;
+    color: rgb(201, 250, 78);
     text-decoration: none;
     transition: color 0.15s ease;
 }
